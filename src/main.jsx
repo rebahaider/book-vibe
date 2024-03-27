@@ -13,16 +13,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOuts></MainLayOuts>,
+    errorElement: <ErrorPages></ErrorPages>,
     
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        errorElement: <ErrorPages></ErrorPages>,
         loader: () => fetch("/fakeData.json"),
       },
       {
-        path: "/singlePage/:id",
+        path: "/singlePage/:bookId",
         element: <SinglePage></SinglePage>,
       },
       {
