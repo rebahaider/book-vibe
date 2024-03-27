@@ -27,6 +27,7 @@ const Book = ({ book }) => {
 
                 </div>
             </Link>
+            
         </div>
     );
 };

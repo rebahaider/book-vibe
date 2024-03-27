@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Book from "./Book";
 const Books = () => {
     const books = useLoaderData();
-    console.log(books);
+    //console.log(books);
 
     return (
         <div className="mt-10">
