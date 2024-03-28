@@ -1,11 +1,24 @@
 import data from '../../data/fakeData.json';
 import { useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveReadItems } from '../../utility/localstorage';
 
 const SinglePage = () => {
 
     const { bookId } = useParams();
+    const bookIdInt=parseInt(bookId);
     const bookDetails = data.find((book) => book.bookId === Number(bookId));
     console.log(bookDetails);
+
+    const handleReadBtn = () => {
+        saveReadItems(bookIdInt);
+        toast('Already Read')
+    }
+    const handleWishListBtn = () => {
+        saveReadItems(bookIdInt);
+        toast('Successfully Added To Wish List')
+    }
     return (
         <div className="  lg:flex gap-10 bg-base-100 shadow-2xl p-10">
             <figure className='bg-base-200 p-10 rounded-2xl'>
@@ -42,9 +55,10 @@ const SinglePage = () => {
                         <p className='font-bold'>{bookDetails.rating}</p>
                     </div>
                     <div className='space-x-4 mt-8'>
-                        <button className='btn btn-outline font-bold px-5'>Read</button>
-                        <button className='btn btn-info text-white font-bold px-5'>Wish List</button>
+                        <button onClick={handleReadBtn} className='btn btn-outline font-bold px-5'>Read</button>
+                        <button onClick={handleWishListBtn} className='btn btn-info text-white font-bold px-5'>Wish List</button>
                     </div>
+                    <ToastContainer></ToastContainer>
                 </div>
 
 
