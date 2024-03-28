@@ -15,6 +15,7 @@ const Wishlist = () => {
     }, [])
     return (
         <div>
+            <h2>I am from wishlist</h2>
             <h2>{savedBook.length}</h2>
         </div>
     );

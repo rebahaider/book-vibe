@@ -12,6 +12,8 @@ const Navbar = () => {
                         <NavLink to={"/"} className="btn">Home</NavLink>
                         <NavLink to={"/listedbooks"} className="btn">Listed Books</NavLink>
                         <NavLink to={"/pagetoread"} className="btn">Pages To Read</NavLink>
+                        <NavLink className="btn">Contact</NavLink>
+                        <NavLink className="btn">About Us</NavLink>
 
                     </ul>
                 </div>
@@ -23,6 +25,8 @@ const Navbar = () => {
                     <NavLink to={"/"} className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn'}>Home</NavLink>
                     <NavLink to={"/listedbooks"} className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn'}>Listed Books</NavLink>
                     <NavLink to={"/pagetoread"} className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn'}>Pages To Read</NavLink>
+                    <NavLink to={"/contact"} className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn'}>Contact</NavLink>
+                    <NavLink to={"/about"} className={({ isActive }) => isActive ? 'btn btn-outline btn-success font-bold' : 'btn'}>About Us</NavLink>
                 </ul>
             </div>
             <div className="navbar-end gap-4">

@@ -19,16 +19,19 @@ const ReadItems = () => {
         console.log(storedReadBook);
     }, [])
 
-    const bookDetails = savedBook.find((book) => book.bookId === Number(bookId));
+    const bookDetails = savedBook.map((book) => book.bookId === Number(bookId));
     console.log(bookDetails);
 
 
     return (
         <div>
-            <h2>{savedBook.length}</h2>
+            
 
-            <div>
-
+            <div className="space-y-6">
+                {
+                    savedBook.map(book=>(<ReadItem key={book.bookId} book={book}></ReadItem>))
+                    
+                }
             </div>
         </div>
     );
