@@ -2,7 +2,7 @@
 
 ## [ Private Repo Link](https://github.com/programming-hero-web-course-4/b9a8-book-vibe-rebahaider)
 
-## [ Live Site Link] ()
+## [ Live Site Link] (https://660584a659b63e1cc56ce5fc--effortless-speculoos-9bc048.netlify.app/)
 
 #Features
 1. User can about book details
