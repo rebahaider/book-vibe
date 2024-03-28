@@ -26,6 +26,7 @@ const ReadItem = ({ book }) => {
                 <p className="flex items-center gap-3"><MdPeople />Publisher: {publisher}</p>
                 <p className="flex items-center gap-3"><MdOutlineContactPage></MdOutlineContactPage> Page {totalPages}</p>
                 </div>
+                <hr />
                 <div className="flex items-center gap-10">
                     <p className="bg-blue-100 font-medium text-blue-900 px-7 py-4 rounded-full">Category: {category}</p>
                     <p className="bg-orange-100 font-medium text-orange-700 px-7 py-4 rounded-full">Rating: {rating}</p>
